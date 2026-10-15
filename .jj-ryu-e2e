@@ -1,0 +1,1 @@
+This repository is a disposable jj-ryu E2E target. The aria-amini/jj-ryu E2E tests push to and squash-merge PRs into main.
