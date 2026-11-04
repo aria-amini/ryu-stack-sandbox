@@ -1,3 +1,4 @@
+# Test change: a workflow edit that review-gate must not let through unreviewed.
 # Copy this file into each repo. All logic lives in actions/review-gate.
 name: review-gate
 
