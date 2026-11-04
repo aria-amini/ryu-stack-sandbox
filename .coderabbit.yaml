@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+reviews:
+  # Only the most important findings inline; the rest go in the summary.
+  profile: quiet
+  # Review only when the review-gate asks for it, by adding this label.
+  auto_review:
+    enabled: false
+    labels:
+      - needs-review
+    auto_incremental_review: true
+    # After this many reviewed commits, stop and let a human reconsider.
+    auto_pause_after_reviewed_commits: 3
+  # Approve when the latest commit is reviewed and every thread is resolved.
+  auto_approvals:
+    enabled: true
+  path_filters:
+    - "!**/pnpm-lock.yaml"
+    - "!**/package-lock.json"
+    - "!**/*.lock"
+  path_instructions:
+    - path: ".github/**"
+      instructions: "Check permissions, triggers and secret exposure. Flag anything that runs untrusted PR code with write access."
