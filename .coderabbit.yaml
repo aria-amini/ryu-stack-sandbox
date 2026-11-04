@@ -13,6 +13,8 @@ reviews:
   # Approve when the latest commit is reviewed and every thread is resolved.
   auto_approvals:
     enabled: true
+    # The PR author (agents comment as me) cannot approve with @coderabbitai approve.
+    allow_author_approval: false
   # Size labels, applied by CodeRabbit during a review.
   suggested_labels: true
   auto_apply_labels: true
