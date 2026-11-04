@@ -1,3 +1,4 @@
+# Test change: touches a CI workflow, so review-gate must ask for CodeRabbit.
 # Copy this file into each repo. All logic lives in actions/review-gate.
 name: review-gate
 
