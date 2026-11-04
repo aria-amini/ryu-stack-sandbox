@@ -1,1 +1,5 @@
 base
+
+## Review gate
+
+PRs here need a passing `review-gate` status. Small docs changes pass on their own; anything risky waits for a CodeRabbit review.
