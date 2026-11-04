@@ -13,6 +13,20 @@ reviews:
   # Approve when the latest commit is reviewed and every thread is resolved.
   auto_approvals:
     enabled: true
+  # Size labels, applied by CodeRabbit during a review.
+  suggested_labels: true
+  auto_apply_labels: true
+  mutually_exclusive_groups:
+    size: [sm, md, lg, xl]
+  labeling_instructions:
+    - label: sm
+      instructions: "Apply when the PR changes fewer than 50 lines, not counting lockfiles and generated files."
+    - label: md
+      instructions: "Apply when the PR changes 50 to 199 lines, not counting lockfiles and generated files."
+    - label: lg
+      instructions: "Apply when the PR changes 200 to 399 lines, not counting lockfiles and generated files."
+    - label: xl
+      instructions: "Apply when the PR changes 400 or more lines, not counting lockfiles and generated files."
   path_filters:
     - "!**/pnpm-lock.yaml"
     - "!**/package-lock.json"
